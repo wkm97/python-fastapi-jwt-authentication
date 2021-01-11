@@ -1,0 +1,199 @@
+2021-01-08 13:16:30,712 loglevel=INFO   logger=main log_request() L68   rid=da4d9ece-314c-4949-9488-cf7fb0dc3757 start request path=/get_jwt
+2021-01-08 13:16:47,059 loglevel=INFO   logger=main log_request() L68   rid=7682a6cd-575c-42ba-9aac-9a661df8a413 start request path=/request_token
+2021-01-08 13:16:47,060 loglevel=INFO   logger=v1.routers.oauth request_access_token() L54   {'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer', 'assertion': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDg0NzkwLCJpYXQiOjE2MTAwODI5OTB9.nBWghgvpARRIYO7y2-P33FZ6r4bpb3nf5QlZFW59vIDAzwJw4mfPMmPL28hOru8JrzOltTMviNB9Osde0cg0KriduvIM9PV0GDAC4MXCAb-PPUC117UtzVoxJlaywokFLhg858IyxjJRWEU1SrH1YQFoxTm4ZnHrkBYnsV6ZO_-gB8ZCA82_LaYfQQiuHkZVxQnPSO7tx_GloUOH4c7PZxxUFNhmzRRm9fmBOpirNywZANhoHSXsAX9SjKNnE5a6WFhuCscpkCWTyoDd7xPoicgxy7hQ5ZFbi9gNiE8DIrqp2p0zzyYHxHNDxr-SgbWqxoVgonvZBi8ju9FFHvmfrA'}
+2021-01-08 13:17:01,208 loglevel=INFO   logger=main log_request() L68   rid=52b24156-8e3d-4a3f-a884-aa3a8c8161f7 start request path=/request_token
+2021-01-08 13:17:01,209 loglevel=INFO   logger=v1.routers.oauth request_access_token() L54   {'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer', 'assertion': 'string'}
+2021-01-08 13:20:25,200 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:20:25,302 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:20:25,304 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:20:25,305 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [13656]
+2021-01-08 13:21:35,784 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [14242]
+2021-01-08 13:21:35,786 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:21:35,787 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:21:35,789 loglevel=INFO   logger=main log_request() L68   rid=6578e3a7-5a5d-4998-9b0c-4ff5476bb4f9 start request path=/request_token
+2021-01-08 13:21:35,790 loglevel=ERROR  logger=uvicorn.error run_asgi() L397  Exception in ASGI application
+Traceback (most recent call last):
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 394, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/fastapi/applications.py", line 201, in __call__
+    await super().__call__(scope, receive, send)  # pragma: no cover
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/middleware/base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "./main.py", line 69, in log_request
+    response = await call_next(request)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/middleware/base.py", line 45, in call_next
+    task.result()
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/middleware/base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/starlette/routing.py", line 41, in app
+    response = await func(request)
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/fastapi/routing.py", line 202, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/mnt/c/Users/Kar Ming/Desktop/ubuntu/Project_Code/DST_BI/dst_auth/venv/lib/python3.6/site-packages/fastapi/routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./v1/routers/oauth.py", line 54, in request_access_token
+    body = json.dumps(request.json())
+  File "/usr/lib/python3.6/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'coroutine' is not JSON serializable
+2021-01-08 13:21:43,775 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:21:43,877 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:21:43,879 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:21:43,938 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [14242]
+2021-01-08 13:21:45,016 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [14270]
+2021-01-08 13:21:45,017 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:21:45,018 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:21:49,309 loglevel=INFO   logger=main log_request() L68   rid=77787723-3a8b-40ea-b2d1-4e260a5db506 start request path=/request_token
+2021-01-08 13:21:49,310 loglevel=INFO   logger=v1.routers.oauth request_access_token() L55   Path requested: /request_token, body: {"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer", "assertion": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDg0NzkwLCJpYXQiOjE2MTAwODI5OTB9.nBWghgvpARRIYO7y2-P33FZ6r4bpb3nf5QlZFW59vIDAzwJw4mfPMmPL28hOru8JrzOltTMviNB9Osde0cg0KriduvIM9PV0GDAC4MXCAb-PPUC117UtzVoxJlaywokFLhg858IyxjJRWEU1SrH1YQFoxTm4ZnHrkBYnsV6ZO_-gB8ZCA82_LaYfQQiuHkZVxQnPSO7tx_GloUOH4c7PZxxUFNhmzRRm9fmBOpirNywZANhoHSXsAX9SjKNnE5a6WFhuCscpkCWTyoDd7xPoicgxy7hQ5ZFbi9gNiE8DIrqp2p0zzyYHxHNDxr-SgbWqxoVgonvZBi8ju9FFHvmfrA"}
+2021-01-08 13:22:00,360 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:22:00,462 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:22:00,463 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:22:00,464 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [14270]
+2021-01-08 13:22:17,576 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [14350]
+2021-01-08 13:22:17,579 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:22:17,580 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:22:18,576 loglevel=INFO   logger=main log_request() L68   rid=69502910-8294-4f19-aaf1-63de794c7fc2 start request path=/request_token
+2021-01-08 13:22:18,577 loglevel=INFO   logger=v1.routers.oauth request_access_token() L55   Path requested: /request_token, body: {"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer", "assertion": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDg0NzkwLCJpYXQiOjE2MTAwODI5OTB9.nBWghgvpARRIYO7y2-P33FZ6r4bpb3nf5QlZFW59vIDAzwJw4mfPMmPL28hOru8JrzOltTMviNB9Osde0cg0KriduvIM9PV0GDAC4MXCAb-PPUC117UtzVoxJlaywokFLhg858IyxjJRWEU1SrH1YQFoxTm4ZnHrkBYnsV6ZO_-gB8ZCA82_LaYfQQiuHkZVxQnPSO7tx_GloUOH4c7PZxxUFNhmzRRm9fmBOpirNywZANhoHSXsAX9SjKNnE5a6WFhuCscpkCWTyoDd7xPoicgxy7hQ5ZFbi9gNiE8DIrqp2p0zzyYHxHNDxr-SgbWqxoVgonvZBi8ju9FFHvmfrA"}
+2021-01-08 13:22:36,271 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:22:36,374 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:22:36,378 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:22:36,382 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [14350]
+2021-01-08 13:22:37,482 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [14393]
+2021-01-08 13:22:37,483 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:22:37,485 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:22:40,118 loglevel=INFO   logger=main log_request() L68   rid=09231d0a-4a94-42c4-a0ef-1ad9ee365798 start request path=/request_token
+2021-01-08 13:22:40,119 loglevel=INFO   logger=v1.routers.oauth request_access_token() L55   Path requested: /request_token, body: grant_type='urn:ietf:params:oauth:grant-type:jwt-bearer' assertion='eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDg0NzkwLCJpYXQiOjE2MTAwODI5OTB9.nBWghgvpARRIYO7y2-P33FZ6r4bpb3nf5QlZFW59vIDAzwJw4mfPMmPL28hOru8JrzOltTMviNB9Osde0cg0KriduvIM9PV0GDAC4MXCAb-PPUC117UtzVoxJlaywokFLhg858IyxjJRWEU1SrH1YQFoxTm4ZnHrkBYnsV6ZO_-gB8ZCA82_LaYfQQiuHkZVxQnPSO7tx_GloUOH4c7PZxxUFNhmzRRm9fmBOpirNywZANhoHSXsAX9SjKNnE5a6WFhuCscpkCWTyoDd7xPoicgxy7hQ5ZFbi9gNiE8DIrqp2p0zzyYHxHNDxr-SgbWqxoVgonvZBi8ju9FFHvmfrA'
+2021-01-08 13:23:27,682 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:23:27,783 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:23:27,785 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:23:27,786 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [14393]
+2021-01-08 13:23:28,839 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [14487]
+2021-01-08 13:23:28,840 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:23:28,842 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:23:32,280 loglevel=INFO   logger=main log_request() L68   rid=a4f256b1-8630-4ac6-a6d2-6ce6c64b759d start request path=/request_token
+2021-01-08 13:23:32,281 loglevel=INFO   logger=v1.routers.oauth request_access_token() L55   Path requested: /request_token, body: grant_type='urn:ietf:params:oauth:grant-type:jwt-bearer' assertion='eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDg0NzkwLCJpYXQiOjE2MTAwODI5OTB9.nBWghgvpARRIYO7y2-P33FZ6r4bpb3nf5QlZFW59vIDAzwJw4mfPMmPL28hOru8JrzOltTMviNB9Osde0cg0KriduvIM9PV0GDAC4MXCAb-PPUC117UtzVoxJlaywokFLhg858IyxjJRWEU1SrH1YQFoxTm4ZnHrkBYnsV6ZO_-gB8ZCA82_LaYfQQiuHkZVxQnPSO7tx_GloUOH4c7PZxxUFNhmzRRm9fmBOpirNywZANhoHSXsAX9SjKNnE5a6WFhuCscpkCWTyoDd7xPoicgxy7hQ5ZFbi9gNiE8DIrqp2p0zzyYHxHNDxr-SgbWqxoVgonvZBi8ju9FFHvmfrA'
+2021-01-08 13:24:31,140 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:24:31,243 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:24:31,245 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:24:31,246 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [14487]
+2021-01-08 13:24:40,755 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [14638]
+2021-01-08 13:24:40,756 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:24:40,757 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:28:02,351 loglevel=INFO   logger=main log_request() L68   rid=178883f2-e9e2-4c79-9f88-ec4ab49ac070 start request path=/request_token
+2021-01-08 13:28:02,352 loglevel=INFO   logger=v1.routers.oauth request_access_token() L55   Path requested: /request_token, body: {"grant_type": "urn:ietf:params:oauth:grant-ty:jwt-bearer", "assertion": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDg0NzkwLCJpYXQiOjE2MTAwODI5OTB9.nBWghgvpARRIYO7y2-P33FZ6r4bpb3nf5QlZFW59vIDAzwJw4mfPMmPL28hOru8JrzOltTMviNB9Osde0cg0KriduvIM9PV0GDAC4MXCAb-PPUC117UtzVoxJlaywokFLhg858IyxjJRWEU1SrH1YQFoxTm4ZnHrkBYnsV6ZO_-gB8ZCA82_LaYfQQiuHkZVxQnPSO7tx_GloUOH4c7PZxxUFNhmzRRm9fmBOpirNywZANhoHSXsAX9SjKNnE5a6WFhuCscpkCWTyoDd7xPoicgxy7hQ5ZFbi9gNiE8DIrqp2p0zzyYHxHNDxr-SgbWqxoVgonvZBi8ju9FFHvmfrA"}
+2021-01-08 13:30:45,207 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:30:45,308 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:30:45,309 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:30:45,310 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [14638]
+2021-01-08 13:31:54,279 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [15407]
+2021-01-08 13:31:54,281 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:31:54,283 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:32:07,062 loglevel=INFO   logger=main log_request() L68   rid=6904d5d1-b7db-4e7c-ab0e-d9273cd2a086 start request path=/request_token
+2021-01-08 13:32:07,063 loglevel=INFO   logger=v1.routers.oauth request_access_token() L55   RequestId: 6904d5d1-b7db-4e7c-ab0e-d9273cd2a086, Path requested: /request_token, body: {"grant_type": "urn:ietf:params:oauth:grant-ty:jwt-bearer", "assertion": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDg0NzkwLCJpYXQiOjE2MTAwODI5OTB9.nBWghgvpARRIYO7y2-P33FZ6r4bpb3nf5QlZFW59vIDAzwJw4mfPMmPL28hOru8JrzOltTMviNB9Osde0cg0KriduvIM9PV0GDAC4MXCAb-PPUC117UtzVoxJlaywokFLhg858IyxjJRWEU1SrH1YQFoxTm4ZnHrkBYnsV6ZO_-gB8ZCA82_LaYfQQiuHkZVxQnPSO7tx_GloUOH4c7PZxxUFNhmzRRm9fmBOpirNywZANhoHSXsAX9SjKNnE5a6WFhuCscpkCWTyoDd7xPoicgxy7hQ5ZFbi9gNiE8DIrqp2p0zzyYHxHNDxr-SgbWqxoVgonvZBi8ju9FFHvmfrA"}
+2021-01-08 13:32:14,068 loglevel=INFO   logger=main log_request() L68   rid=23b851c9-2f45-4966-83c4-dc539356d77d start request path=/refresh_token
+2021-01-08 13:32:14,069 loglevel=INFO   logger=v1.routers.oauth refresh_token() L82   RequestId: 23b851c9-2f45-4966-83c4-dc539356d77d, Path requested: /refresh_token, body: {"refresh_token": "string"}
+2021-01-08 13:33:22,753 loglevel=INFO   logger=main log_request() L68   rid=dc31ad81-b2d9-41e8-a1d1-25cc43b95210 start request path=/refresh_token
+2021-01-08 13:33:22,755 loglevel=INFO   logger=v1.routers.oauth refresh_token() L82   RequestId: dc31ad81-b2d9-41e8-a1d1-25cc43b95210, Path requested: /refresh_token, body: {"refresh_token": "string"}
+2021-01-08 13:34:40,610 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:34:40,712 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:34:40,713 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:34:40,714 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [15407]
+2021-01-08 13:34:41,795 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [15745]
+2021-01-08 13:34:41,797 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:34:41,798 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:34:45,258 loglevel=INFO   logger=main log_request() L68   rid=3314f22c-c54e-42d4-9d6a-98fa2ece7330 start request path=/refresh_token
+2021-01-08 13:34:45,259 loglevel=INFO   logger=v1.routers.oauth refresh_token() L82   RequestId: 3314f22c-c54e-42d4-9d6a-98fa2ece7330, Path requested: /refresh_token, body: {"refresh_token": "string"}
+2021-01-08 13:34:57,719 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:34:57,821 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:34:57,822 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:34:57,823 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [15745]
+2021-01-08 13:34:58,915 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [15799]
+2021-01-08 13:34:58,916 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:34:58,917 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:36:42,898 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:36:43,000 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:36:43,082 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:36:43,086 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [15799]
+2021-01-08 13:36:44,180 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [16026]
+2021-01-08 13:36:44,181 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:36:44,182 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:36:46,702 loglevel=INFO   logger=main log_request() L68   rid=7ea8b795-3826-44cd-9ad2-c740a0fe3d53 start request path=/refresh_token
+2021-01-08 13:36:46,703 loglevel=INFO   logger=v1.routers.oauth refresh_token() L82   RequestId: 7ea8b795-3826-44cd-9ad2-c740a0fe3d53, Path requested: /refresh_token, body: {"refresh_token": "string"}
+2021-01-08 13:37:16,019 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:37:16,122 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:37:16,131 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:37:16,133 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [16026]
+2021-01-08 13:37:17,190 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [16099]
+2021-01-08 13:37:17,191 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:37:17,193 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:37:30,591 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:37:30,693 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:37:30,695 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:37:30,704 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [16099]
+2021-01-08 13:37:31,768 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [16132]
+2021-01-08 13:37:31,769 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:37:31,774 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:37:33,865 loglevel=INFO   logger=main log_request() L68   rid=7ab527a9-39cc-4124-90b1-e0c0d40a1e2e start request path=/refresh_token
+2021-01-08 13:37:33,866 loglevel=INFO   logger=v1.routers.oauth refresh_token() L82   RequestId: 7ab527a9-39cc-4124-90b1-e0c0d40a1e2e, Path requested: /refresh_token, body: {"refresh_token": "string"}
+2021-01-08 13:39:35,233 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:39:35,335 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:39:35,338 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:39:35,342 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [16132]
+2021-01-08 13:39:36,335 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [16400]
+2021-01-08 13:39:36,336 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:39:36,338 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:39:50,976 loglevel=INFO   logger=main log_request() L68   rid=72896f99-6357-4da2-913e-d08fbd601195 start request path=/refresh_token
+2021-01-08 13:39:50,976 loglevel=INFO   logger=v1.routers.oauth refresh_token() L82   RequestId: 72896f99-6357-4da2-913e-d08fbd601195, Path requested: /refresh_token, body: {"refresh_token": "string"}
+2021-01-08 13:39:51,008 loglevel=ERROR  logger=v1.routers.oauth refresh_token() L94   RequestId: 72896f99-6357-4da2-913e-d08fbd601195, Msg: Refresh Token Invalid.
+2021-01-08 13:41:00,186 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:41:00,289 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:41:00,293 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:41:00,302 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [16400]
+2021-01-08 13:41:01,364 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [16544]
+2021-01-08 13:41:01,365 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:41:01,367 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 13:41:03,574 loglevel=INFO   logger=main log_request() L68   rid=fc1f9eb2-a48c-43e9-878d-f25516969cc2 start request path=/docs
+2021-01-08 13:41:03,721 loglevel=INFO   logger=main log_request() L68   rid=eb5dddca-d0d1-41f9-99ae-ef9800f3fe61 start request path=/openapi.json
+2021-01-08 13:42:20,373 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 13:42:20,475 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 13:42:20,476 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 13:42:20,477 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [16544]
+2021-01-08 13:42:21,488 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [16702]
+2021-01-08 13:42:21,489 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 13:42:21,491 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 14:38:16,648 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
+2021-01-08 14:38:16,754 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
+2021-01-08 14:38:16,772 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
+2021-01-08 14:38:16,784 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [16702]
+2021-01-08 16:54:04,561 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [2067]
+2021-01-08 16:54:04,577 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
+2021-01-08 16:54:04,578 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.
+2021-01-08 17:14:26,129 loglevel=INFO   logger=main log_request() L68   rid=a0d1c44b-c854-4294-9cb7-0ed69328ea24 start request path=/docs
+2021-01-08 17:14:26,520 loglevel=INFO   logger=main log_request() L68   rid=769476bb-f775-4d34-9afc-ae9e357f35fe start request path=/openapi.json
+2021-01-08 17:14:35,702 loglevel=INFO   logger=main log_request() L68   rid=549b3e28-34f2-4630-bba7-69e412027385 start request path=/get_jwt
+2021-01-08 17:14:55,456 loglevel=INFO   logger=main log_request() L68   rid=1161a6cf-df3a-4c23-bc9a-2ee2eba63975 start request path=/request_token
+2021-01-08 17:14:55,457 loglevel=INFO   logger=v1.routers.oauth request_access_token() L55   RequestId: 1161a6cf-df3a-4c23-bc9a-2ee2eba63975, Path requested: /request_token, body: {"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer", "assertion": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHbG9iZU9TUyIsImF1ZCI6Imh0dHA6Ly9hcGlzZXJ2ZXIvYXBpL29hdXRoL3Rva2VuIiwiZXhwIjoxNjEwMDk5MDc1LCJpYXQiOjE2MTAwOTcyNzV9.XaTturHZRSZ4EDRWYejBfsQYsCPcUZGUCPNxC7PSkljI_jIZg6fwo0FOJGWbFOt5yJHaOIEocS5vNRmGS337PQwYTDgt9vVKxI6Ja-T0fAOoA-pReXTQqbLRjvbBUdXt310wi3P7uFbrsVIO_oUDMGgIrvWjF-qUrdsNXhgQ9ty0RkYfThXdO3kwppnV2YpFSeJdIC9WdyJulq7g79c_wbT6X65sjyn_Qi8juy0ASInBw3a9ULOkQpgYAmfYI4htu3PVUxHuHOlLSc-Nc2iEJjEuO9cV3kMFeW9V4M3ZGt4yDI63-a3iXyM_DwsNluQQyNFMUtsSOZzOUXTPHK8K1Q"}
+2021-01-08 17:15:23,871 loglevel=INFO   logger=main log_request() L68   rid=5d51c9f0-161b-40b9-9b5c-d51c8af3cff8 start request path=/validate_access_token
+2021-01-08 17:15:23,872 loglevel=INFO   logger=v1.routers.oauth validate_access_token() L126  RequestId: 5d51c9f0-161b-40b9-9b5c-d51c8af3cff8, Path requested: /validate_access_token, body: {"access_token": "L7va_v3dJShs77NmZTkX81luEbqzIQ"}
