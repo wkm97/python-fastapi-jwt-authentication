@@ -1,7 +1,0 @@
-2021-01-08 12:25:02,480 loglevel=INFO   logger=uvicorn.error shutdown() L209  Shutting down
-2021-01-08 12:25:02,584 loglevel=INFO   logger=uvicorn.error shutdown() L43   Waiting for application shutdown.
-2021-01-08 12:25:02,588 loglevel=INFO   logger=uvicorn.error shutdown() L46   Application shutdown complete.
-2021-01-08 12:25:02,589 loglevel=INFO   logger=uvicorn.error serve() L76   Finished server process [8607]
-2021-01-08 12:25:03,635 loglevel=INFO   logger=uvicorn.error serve() L63   Started server process [8713]
-2021-01-08 12:25:03,637 loglevel=INFO   logger=uvicorn.error startup() L26   Waiting for application startup.
-2021-01-08 12:25:03,638 loglevel=INFO   logger=uvicorn.error startup() L38   Application startup complete.

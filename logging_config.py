@@ -1,3 +1,5 @@
+from config import LoggerConfig
+
 LOGGING_CONFIG = { 
     'version': 1,
     'disable_existing_loggers': False,
@@ -20,7 +22,7 @@ LOGGING_CONFIG = {
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'level': 'DEBUG',
             'formatter': 'simple',
-            'filename': 'logs/out.log',
+            'filename': f'{LoggerConfig.dir_path}/out.log',
             'when': 'D',
             'interval': 1,
             'backupCount': 5,
